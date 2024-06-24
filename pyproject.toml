@@ -24,11 +24,20 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
-dependencies = []
+dependencies = [
+  "numpy>=1.21.0",
+]
 
 [project.urls]
 "Homepage" = "https://github.com/astro-pso/psoplot"
 "Bug Tracker" = "https://github.com/astro-pso/psoplot/issues"
+
+[project.optional-dependencies]
+docs = [
+    "sphinx",
+    "furo",
+    "sphinx-copybutton",
+]
 
 [tool.hatch.version]
 path = "src/psoplot/__about__.py"
@@ -36,7 +45,6 @@ path = "src/psoplot/__about__.py"
 [tool.hatch.envs.types]
 extra-dependencies = [
   "mypy>=1.0.0",
-  "numpy>=1.21.0",
 ]
 [tool.hatch.envs.types.scripts]
 check = "mypy --install-types --non-interactive {args:src/psoplot tests}"
