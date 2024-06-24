@@ -27,9 +27,8 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Documentation = "https://github.com/Alexander Holas/psoplot#readme"
-Issues = "https://github.com/Alexander Holas/psoplot/issues"
-Source = "https://github.com/Alexander Holas/psoplot"
+"Homepage" = "https://github.com/astro-pso/psoplot"
+"Bug Tracker" = "https://github.com/astro-pso/psoplot/issues"
 
 [tool.hatch.version]
 path = "src/psoplot/__about__.py"
@@ -37,6 +36,7 @@ path = "src/psoplot/__about__.py"
 [tool.hatch.envs.types]
 extra-dependencies = [
   "mypy>=1.0.0",
+  "numpy>=1.21.0",
 ]
 [tool.hatch.envs.types.scripts]
 check = "mypy --install-types --non-interactive {args:src/psoplot tests}"
@@ -59,3 +59,12 @@ exclude_lines = [
   "if __name__ == .__main__.:",
   "if TYPE_CHECKING:",
 ]
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "./github",
+    "/docs",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/psoplot"]
