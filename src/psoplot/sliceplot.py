@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 
 
 class SlicePlot:
-    def __init__(self) -> plt.Figure:
+    def __init__(self) -> None:
         self.fig, self.ax = plt.subplots()
         self.ax.set_aspect("equal")
         self.ax.set_axis_off()
@@ -11,4 +11,6 @@ class SlicePlot:
         self.ax.set_xticks([])
         self.ax.set_yticks([])
 
+    def plot(self, x, y, color="black") -> plt.Figure:
+        self.ax.plot(x, y, color=color)
         return self.fig
