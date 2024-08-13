@@ -3,11 +3,11 @@ PSO Plotting Utils
 
 ## Installation
 ```bash
-```bash
 pip install pso_plot
 ``````
 ## Usage
-```python
+
+If you only want to use a style, you can use the following code:
 ```python
 import matplotlib.pyplot as plt
 import psoplot
@@ -15,4 +15,15 @@ import psoplot
 plt.style.use("psoplot.aanda_publication")
 
 # [Your plotting code here]
-``````
+
+```
+
+If you want to use e.g. a convenient wrapper for generating subplots, you can use the following code:
+```python
+import psoplot.aanda_plot as aplt
+
+fig, (ax1, ax2) = aplt.subplots(2, 1)
+```
+
+Which is essentially a wrapper around ``plt.subplots`` with some convenience settings regarding the
+size of the figure.

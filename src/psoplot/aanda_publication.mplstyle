@@ -27,7 +27,7 @@ ytick.left          : True
 ytick.minor.visible : True
 
 lines.linewidth       : 0.8
-lines.markersize      : 8
+lines.markersize      : 2.5
 lines.markeredgewidth : 1.0
 
 
