@@ -48,7 +48,6 @@ class GridPlot:
 
         self.num: int
         self.isarray = hasattr(arg, "shape") and not np.isscalar(arg)
-        print(arg)
         self.fig_w = fig_w
         self.fig_h = fig_h
 
@@ -88,8 +87,7 @@ class GridPlot:
             raise ValueError(
                 "Invalid arguments: Either Figureheight or Figurewidth must be given..."
             )
-
-        print(self.arg)
+            
         self._genGrid()
 
     def _getGridSpecForGivenAspectRatiosEqualHeight(self):
@@ -113,13 +111,8 @@ class GridPlot:
                 wspace_abs = fw_in_margin / self.nc * self.wspace
 
             fw_effective = fw_in_margin - wspace_abs
-
-            for j in range(self.nr):
-                _ = np.ones_like(self.arg[j])
-                print(self.arg[j])
-                print(np.sum(self.arg[j]))
-                h_row = fw_effective / np.sum(self.arg[j])
-                h[j] = h[j] * h_row
+            
+            h *= (fw_effective / np.sum(self.arg, axis=-1))[...,None]
 
             w = h * self.arg
             H = np.sum(h[:, 0])
@@ -168,15 +161,10 @@ class GridPlot:
 
             fh_effective = fh_in_margin - hspace_abs
 
-            for j in range(self.nc):
-                _ = np.ones_like(self.arg[:, j])
-                # w_col   = (self.fig_h - self.margins['top'] - self.margins['bottom']) / np.sum(self.arg[j])
-                w_col = fh_effective / np.sum(1.0 / self.arg[:, j])
-                w[:, j] = w[:, j] * w_col
+            w *= (fh_effective / np.sum(1.0 / self.arg, axis=0))[None,...]
 
             h = w / self.arg
             W = np.sum(w[0])
-            # h_ratios    = h/(self.fig_h - self.margins['top'] - self.margins['bottom'])
             h_ratios = h / fh_effective
             w_ratios = w / W
             self.h = h
@@ -196,7 +184,7 @@ class GridPlot:
         else:
             h_ratios = 1
             w_ratios = 1
-            # newsize     = [(self.fig_h- self.margins['top'] - self.margins['bottom'])/self.arg + self.margins['left'] + self.margins['right'], self.fig_h]
+            
             newsize = [
                 self.fig_h
                 * (1.0 - self.margins["top"] - self.margins["bottom"])
@@ -220,8 +208,6 @@ class GridPlot:
         fig = plt.figure(figsize=self.newsize)
         fig.subplots_adjust(**self._get_margins())
 
-        print("wspace", self.wspace)
-        print("hspace", self.hspace)
         if self.isarray:
             if (self.fig_w is not None) and (self.fig_h is None):
                 gs0 = gridspec.GridSpec(
