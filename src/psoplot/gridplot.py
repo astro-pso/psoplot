@@ -87,7 +87,7 @@ class GridPlot:
             raise ValueError(
                 "Invalid arguments: Either Figureheight or Figurewidth must be given..."
             )
-            
+
         self._genGrid()
 
     def _getGridSpecForGivenAspectRatiosEqualHeight(self):
@@ -111,7 +111,7 @@ class GridPlot:
                 wspace_abs = fw_in_margin / self.nc * self.wspace
 
             fw_effective = fw_in_margin - wspace_abs
-            
+
             h *= (fw_effective / np.sum(self.arg, axis=-1))[..., None]
 
             w = h * self.arg
@@ -184,7 +184,7 @@ class GridPlot:
         else:
             h_ratios = 1
             w_ratios = 1
-            
+
             newsize = [
                 self.fig_h
                 * (1.0 - self.margins["top"] - self.margins["bottom"])
