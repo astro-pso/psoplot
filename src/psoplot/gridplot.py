@@ -112,7 +112,7 @@ class GridPlot:
 
             fw_effective = fw_in_margin - wspace_abs
             
-            h *= (fw_effective / np.sum(self.arg, axis=-1))[...,None]
+            h *= (fw_effective / np.sum(self.arg, axis=-1))[..., None]
 
             w = h * self.arg
             H = np.sum(h[:, 0])
@@ -161,7 +161,7 @@ class GridPlot:
 
             fh_effective = fh_in_margin - hspace_abs
 
-            w *= (fh_effective / np.sum(1.0 / self.arg, axis=0))[None,...]
+            w *= (fh_effective / np.sum(1.0 / self.arg, axis=0))[None ,...]
 
             h = w / self.arg
             W = np.sum(w[0])
