@@ -3,7 +3,7 @@ PSO Plotting Utils
 
 ## Installation
 ```bash
-pip install pso_plot
+pip install psoplot
 ``````
 ## Usage
 
