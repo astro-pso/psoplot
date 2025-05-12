@@ -1,0 +1,48 @@
+text.usetex           : True
+text.latex.preamble   : \usepackage{amsmath}\usepackage{mathtools}
+
+font.family   : 'monospace'
+font.serif    : 'Computer Modern Typewriter'
+font.size     : 10
+font.weight   : normal
+
+axes.labelsize : 8
+axes.linewidth : 0.6
+
+### TICKS
+xtick.labelsize     : 6
+xtick.major.size    : 3.
+xtick.minor.size    : 1.5
+xtick.top           : True
+xtick.bottom        : True
+xtick.minor.visible : True
+xtick.direction     : in
+
+ytick.labelsize     : 6
+ytick.major.size    : 3.
+ytick.minor.size    : 1.5
+ytick.direction     : in
+ytick.right         : True
+ytick.left          : True
+ytick.minor.visible : True
+
+lines.linewidth       : 0.8
+lines.markersize      : 2.5
+lines.markeredgewidth : 1.0
+
+# For the AASv7 template in twocolumn format
+# Line width: 242.26653pt
+# Text width: 513.11743pt
+
+# Fixed for AAS template (242.27/72.27, 4.8/6.4*242.27/72.27)
+figure.figsize        : 3.35, 2.51
+figure.dpi            : 300
+# the left side of the subplots of the figure
+figure.subplot.left   : 0.16
+# the right side of the subplots of the figure
+figure.subplot.right  : 0.96
+# the bottom of the subplots of the figure
+figure.subplot.bottom : 0.05
+figure.subplot.top    : 0.96
+legend.frameon        : False
+legend.fontsize       : 8.0
