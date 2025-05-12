@@ -27,6 +27,8 @@ jobs:
       - name: Install LaTeX dependencies
         run: |
               sudo apt-get update -y \
+
+              # Install the full version 
               sudo apt-get install texlive-full -y
  
       - name: Install dependencies
