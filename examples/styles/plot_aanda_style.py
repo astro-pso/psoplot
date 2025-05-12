@@ -23,6 +23,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 import psoplot.aanda_plot as aplt
+
 # Alternatively, only import the stylesheet without
 # the subplots function:
 # > import psoplot

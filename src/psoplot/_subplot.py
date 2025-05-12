@@ -49,4 +49,3 @@ def _subplots(
         )
 
     return fig, axs
-
