@@ -78,7 +78,6 @@ def subplots(
     """
 
     return _subplots(
-        "psoplot.aanda_publication",
         AAS_COL_WIDTH,
         AAS_COL_HEIGHT,
         nrows=nrows,
@@ -94,4 +93,3 @@ def subplots(
         gridspec_kw=gridspec_kw,
         **fig_kw,
     )
-
