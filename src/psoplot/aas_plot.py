@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import psoplot
 from ._subplot import _subplots
 
+plt.style.use("psoplot.aas_publication")
+
 AAS_COL_WIDTH = 242.7 / 72.27
 AAS_COL_HEIGHT = 4.8 / 6.4 * AAS_COL_WIDTH
 

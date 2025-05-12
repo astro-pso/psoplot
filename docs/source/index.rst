@@ -54,7 +54,7 @@ For example plots, see the example page.
    :maxdepth: 2
    :caption: Examples:
 
-   examples/index
+   styles_examples/index
 
 
 Indices and tables

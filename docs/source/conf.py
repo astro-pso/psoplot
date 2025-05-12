@@ -7,16 +7,22 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "psoplot"
-copyright = "2024, Alexander Holas"
+copyright = "2025, Alexander Holas"
 author = "Alexander Holas"
-release = "24.06.1"
+release = "25.05.1"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
     "sphinx_copybutton",
+    "sphinx_gallery.gen_gallery",
 ]
+
+sphinx_gallery_conf = {
+    "examples_dirs": ["../../examples/styles"],
+    "gallery_dirs": ["styles_examples"],
+}
 
 templates_path = ["_templates"]
 exclude_patterns = []
