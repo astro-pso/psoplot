@@ -1,6 +1,7 @@
 # Import for plotting and styles
 import matplotlib.pyplot as plt
 
+
 def _subplots(
     col_width: float,
     col_height: float,
@@ -48,3 +49,4 @@ def _subplots(
         )
 
     return fig, axs
+

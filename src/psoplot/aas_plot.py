@@ -94,3 +94,4 @@ def subplots(
         gridspec_kw=gridspec_kw,
         **fig_kw,
     )
+
