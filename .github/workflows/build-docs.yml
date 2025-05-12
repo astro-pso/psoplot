@@ -27,11 +27,7 @@ jobs:
       - name: Install LaTeX dependencies
         run: |
               sudo apt-get update -y \
-
-              sudo apt install -y \
-                  texlive-base \
-                  texlive-latex-base \
-                  texlive-fonts-recommended
+              sudo apt-get install texlive-full -y
  
       - name: Install dependencies
         run: |
