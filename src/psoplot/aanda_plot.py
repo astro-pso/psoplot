@@ -3,6 +3,7 @@
 import matplotlib.pyplot as plt
 
 import psoplot
+from ._subplot import _subplots
 
 plt.style.use("psoplot.aanda_publication")
 
@@ -78,23 +79,19 @@ def subplots(
 
     """
 
-    fig, axs = plt.subplots(
-        nrows,
-        ncols,
+    return _subplots(
+        AANDA_COL_WIDTH,
+        AANDA_COL_HEIGHT,
+        nrows=nrows,
+        ncols=ncols,
+        double_column=double_column,
         sharex=sharex,
         sharey=sharey,
         squeeze=squeeze,
-        width_ratios=width_ratio,
-        height_ratios=height_ratio,
+        width_ratio=width_ratio,
+        height_ratio=height_ratio,
+        elongate=elongate,
         subplot_kw=subplot_kw,
         gridspec_kw=gridspec_kw,
         **fig_kw,
     )
-
-    if "figsize" not in fig_kw:
-        fig.set_size_inches(
-            AANDA_COL_WIDTH * (2 if double_column else 1),
-            AANDA_COL_HEIGHT if elongate is None else elongate * AANDA_COL_HEIGHT,
-        )
-
-    return fig, axs

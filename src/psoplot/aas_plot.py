@@ -3,8 +3,7 @@
 import matplotlib.pyplot as plt
 
 import psoplot
-
-plt.style.use("psoplot.aas_publication")
+from ._subplot import _subplots
 
 AAS_COL_WIDTH = 242.7 / 72.27
 AAS_COL_HEIGHT = 4.8 / 6.4 * AAS_COL_WIDTH
@@ -59,8 +58,8 @@ def subplots(
         to ``gridspec_kw={'height_ratios': [...]}``.
     elongate : float, default: None
         Vertical elongation factor. If None, the height is set to
-        `AAS_COL_HEIGHT`. A value of 1 corresponds to the height of
-        `AAS_COL_HEIGHT`. Ignored if `fig_kw` contains a `figsize` key
+        `AANDA_COL_HEIGHT`. A value of 1 corresponds to the height of
+        `AANDA_COL_HEIGHT`. Ignored if `fig_kw` contains a `figsize` key
     subplot_kw : dict, default: None
         Dict with keywords passed to the `add_subplot` call used to create
         each subplot
@@ -78,23 +77,20 @@ def subplots(
 
     """
 
-    fig, axs = plt.subplots(
-        nrows,
-        ncols,
+    return _subplots(
+        "psoplot.aanda_publication",
+        AAS_COL_WIDTH,
+        AAS_COL_HEIGHT,
+        nrows=nrows,
+        ncols=ncols,
+        double_column=double_column,
         sharex=sharex,
         sharey=sharey,
         squeeze=squeeze,
-        width_ratios=width_ratio,
-        height_ratios=height_ratio,
+        width_ratio=width_ratio,
+        height_ratio=height_ratio,
+        elongate=elongate,
         subplot_kw=subplot_kw,
         gridspec_kw=gridspec_kw,
         **fig_kw,
     )
-
-    if "figsize" not in fig_kw:
-        fig.set_size_inches(
-            AAS_COL_WIDTH * (2 if double_column else 1),
-            AAS_COL_HEIGHT if elongate is None else elongate * AAS_COL_HEIGHT,
-        )
-
-    return fig, axs
