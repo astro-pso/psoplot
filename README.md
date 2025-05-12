@@ -27,3 +27,9 @@ fig, (ax1, ax2) = aplt.subplots(2, 1)
 
 Which is essentially a wrapper around ``plt.subplots`` with some convenience settings regarding the
 size of the figure.
+
+## Available styles
+- `psoplot.aanda_publication`: A style for A&A publication
+- `psoplot.aas_publication`: A style for AAS publication, e.g. ApJ, ApJL, ApJS
+
+For example plots, see the (https://astro-pso.github.io/psoplot)[examples] page.
