@@ -1,13 +1,10 @@
 name: Deploy docs
 
 on:
-  workflow_run:
-    workflows: ["build-docs"]
-    types:
-      - completed
-    branches: 
-      - main
-      
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
   workflow_dispatch: # manual trigger
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -35,11 +32,17 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: '3.11' 
- 
+      - name: Install LaTeX dependencies
+        run: |
+              sudo apt-get update -y \
+
+              # Install the full version 
+              sudo apt-get install texlive-full -y
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install sphinx furo sphinx-copybutton
+          pip install sphinx furo sphinx-copybutton sphinx-gallery matplotlib numpy
 
       - name: Install psoplot
         run: pip install -e .
@@ -64,7 +67,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: 'docs/build/html/'
       - name: Deploy to GitHub Pages
