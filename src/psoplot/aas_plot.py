@@ -1,14 +1,14 @@
-# Plotting utilities for A&A paper
+# Plotting utilities for AAS paper, e.g. ApJ, ApJL, ApJS
 
 import matplotlib.pyplot as plt
 
 import psoplot
 from ._subplot import _subplots
 
-plt.style.use("psoplot.aanda_publication")
+plt.style.use("psoplot.aas_publication")
 
-AANDA_COL_WIDTH = 240.0 / 72.27
-AANDA_COL_HEIGHT = 4.8 / 6.4 * AANDA_COL_WIDTH
+AAS_COL_WIDTH = 242.7 / 72.27
+AAS_COL_HEIGHT = 4.8 / 6.4 * AAS_COL_WIDTH
 
 
 def subplots(
@@ -80,8 +80,8 @@ def subplots(
     """
 
     return _subplots(
-        AANDA_COL_WIDTH,
-        AANDA_COL_HEIGHT,
+        AAS_COL_WIDTH,
+        AAS_COL_HEIGHT,
         nrows=nrows,
         ncols=ncols,
         double_column=double_column,
