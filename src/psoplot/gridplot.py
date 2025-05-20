@@ -307,33 +307,41 @@ class GridPlot:
             array of axes objects
         """
         ###sanity checks:
-        hasshape = np.logical_and.reduce((
-            isinstance(idxr, int),
-            isinstance(idxc, list),
-            all(isinstance(idx, int) for idx in idxc),
-            len(idxc) == 2,
-        ))
+        hasshape = np.logical_and.reduce(
+            (
+                isinstance(idxr, int),
+                isinstance(idxc, list),
+                all(isinstance(idx, int) for idx in idxc),
+                len(idxc) == 2,
+            )
+        )
         if hasshape:
             if idxc[1] == -1:
                 idxc[1] = self.nc
             if idxr == -1:
                 idxr = self.nr - 1
 
-            idxinrange = np.logical_and.reduce((
-                idxr >= 0,
-                idxr < self.nr,
-                idxc[0] >= 0,
-                idxc[1] <= self.nc,
-            ))
+            idxinrange = np.logical_and.reduce(
+                (
+                    idxr >= 0,
+                    idxr < self.nr,
+                    idxc[0] >= 0,
+                    idxc[1] <= self.nc,
+                )
+            )
 
             if idxinrange and idxc[0] < idxc[1]:
-                ismergingpossible = np.logical_and.reduce((
-                    all([
-                        height == self.h[idxr, idxc[0] : idxc[1]][0]
-                        for height in self.h[idxr, idxc[0] : idxc[1]]
-                    ]),
-                    np.logical_or(self.nc > 1, self.nr > 1),
-                ))
+                ismergingpossible = np.logical_and.reduce(
+                    (
+                        all(
+                            [
+                                height == self.h[idxr, idxc[0] : idxc[1]][0]
+                                for height in self.h[idxr, idxc[0] : idxc[1]]
+                            ]
+                        ),
+                        np.logical_or(self.nc > 1, self.nr > 1),
+                    )
+                )
                 if ismergingpossible:
                     gs = self.axs[idxr, idxc[0]].get_gridspec()
 
@@ -376,33 +384,41 @@ class GridPlot:
             array of axes objects
         """
         ###sanity checks:
-        hasshape = np.logical_and.reduce((
-            isinstance(idxc, int),
-            isinstance(idxr, list),
-            all(isinstance(idx, int) for idx in idxr),
-            len(idxr) == 2,
-        ))
+        hasshape = np.logical_and.reduce(
+            (
+                isinstance(idxc, int),
+                isinstance(idxr, list),
+                all(isinstance(idx, int) for idx in idxr),
+                len(idxr) == 2,
+            )
+        )
         if hasshape:
             if idxr[1] == -1:
                 idxr = self.nr
             if idxc == -1:
                 idxc = self.nc - 1
 
-            idxinrange = np.logical_and.reduce((
-                idxc >= 0,
-                idxc < self.nc,
-                idxr[0] >= 0,
-                idxr[1] <= self.nr,
-            ))
+            idxinrange = np.logical_and.reduce(
+                (
+                    idxc >= 0,
+                    idxc < self.nc,
+                    idxr[0] >= 0,
+                    idxr[1] <= self.nr,
+                )
+            )
 
             if idxinrange and idxr[0] < idxr[1]:
-                ismergingpossible = np.logical_and.reduce((
-                    all([
-                        width == self.w[idxr[0] : idxr[1], idxc][0]
-                        for width in self.w[idxr[0] : idxr[1], idxc]
-                    ]),
-                    np.logical_or(self.nc > 1, self.nr > 1),
-                ))
+                ismergingpossible = np.logical_and.reduce(
+                    (
+                        all(
+                            [
+                                width == self.w[idxr[0] : idxr[1], idxc][0]
+                                for width in self.w[idxr[0] : idxr[1], idxc]
+                            ]
+                        ),
+                        np.logical_or(self.nc > 1, self.nr > 1),
+                    )
+                )
                 if ismergingpossible:
                     gs = self.axs[idxr[0], idxc].get_gridspec()
 
@@ -428,28 +444,32 @@ class GridPlot:
 
     def merge(self, idxr, idxc):
         ###sanity checks:
-        hasshape = np.logical_and.reduce((
-            isinstance(idxc, list),
-            isinstance(idxr, list),
-            all(isinstance(idx, int) for idx in idxr),
-            all(isinstance(idx, int) for idx in idxc),
-            len(idxr) == 2,
-            len(idxc) == 2,
-        ))
+        hasshape = np.logical_and.reduce(
+            (
+                isinstance(idxc, list),
+                isinstance(idxr, list),
+                all(isinstance(idx, int) for idx in idxr),
+                all(isinstance(idx, int) for idx in idxc),
+                len(idxr) == 2,
+                len(idxc) == 2,
+            )
+        )
         if hasshape:
             if idxr[1] == -1:
                 idxr = self.nr
             if idxc[1] == -1:
                 idxc = self.nc
 
-            idxinrange = np.logical_and.reduce((
-                idxc[0] >= 0,
-                idxc[1] <= self.nc,
-                idxr[0] >= 0,
-                idxr[1] <= self.nr,
-                idxc[0] < idxc[1],
-                idxr[0] < idxr[1],
-            ))
+            idxinrange = np.logical_and.reduce(
+                (
+                    idxc[0] >= 0,
+                    idxc[1] <= self.nc,
+                    idxr[0] >= 0,
+                    idxr[1] <= self.nr,
+                    idxc[0] < idxc[1],
+                    idxr[0] < idxr[1],
+                )
+            )
 
             if idxinrange:
                 # ismergingpossible = np.logical_and.reduce((all([width==self.w[idxr[0]:idxr[1],idxc][0] for width in self.w[idxr[0]:idxr[1],idxc]]), np.logical_or(self.nc>1, self.nr>1)))
