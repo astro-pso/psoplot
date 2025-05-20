@@ -1,8 +1,16 @@
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 
-plt.style.use("psoplot.aanda_publication")
+import psoplot
+
+if matplotlib.__version__ < "3.7":
+    import os
+
+    plt.style.use(os.path.join(psoplot.__path__[0], "aanda_publication.mplstyle"))
+else:
+    plt.style.use("psoplot.aanda_publication")
 
 
 class GridPlot:

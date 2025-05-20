@@ -17,7 +17,7 @@ def _subplots(
     subplot_kw=None,
     gridspec_kw=None,
     **fig_kw,
-) -> tuple[plt.Figure, plt.Axes]:
+):
     """
     Create a styled figure and a set of subplots using the given style and column dimensions.
 

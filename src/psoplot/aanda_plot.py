@@ -1,11 +1,17 @@
 # Plotting utilities for A&A paper
 
+import matplotlib
 import matplotlib.pyplot as plt
 
 import psoplot
 from ._subplot import _subplots
 
-plt.style.use("psoplot.aanda_publication")
+if matplotlib.__version__ < "3.7":
+    import os
+
+    plt.style.use(os.path.join(psoplot.__path__[0], "aanda_publication.mplstyle"))
+else:
+    plt.style.use("psoplot.aanda_publication")
 
 AANDA_COL_WIDTH = 240.0 / 72.27
 AANDA_COL_HEIGHT = 4.8 / 6.4 * AANDA_COL_WIDTH
@@ -24,7 +30,7 @@ def subplots(
     subplot_kw=None,
     gridspec_kw=None,
     **fig_kw,
-) -> (plt.Figure, plt.Axes):
+):
     """
     Create a figure and a set of subplots. Essentially a wrapper around
     `matplotlib.pyplot.subplots` with some additional functionality,
