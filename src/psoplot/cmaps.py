@@ -322,11 +322,22 @@ def list_colormaps() -> tuple[str, ...]:
 
 def get_colormap(name: str) -> LinearSegmentedColormap:
     """Return a colormap by name."""
+    """Return a colormap by name.
 
-    return COLORMAPS[name]
+    Raises
+    ------
+    ValueError
+        If *name* is not one of the available colormaps. The error message
+        includes the unknown name and the list of available colormap names.
+    """
 
-
-__all__ = [
+    try:
+        return COLORMAPS[name]
+    except KeyError as exc:
+        available = ", ".join(sorted(list_colormaps()))
+        raise ValueError(
+            f"Unknown colormap {name!r}. Available colormaps are: {available}."
+        ) from exc
     "BlackBlueWhite",
     "BlackBlueYellow",
     "marco_diverging_1",
