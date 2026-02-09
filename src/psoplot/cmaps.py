@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from matplotlib.colors import LinearSegmentedColormap
 
-
 BlackBlueWhite = LinearSegmentedColormap.from_list(
     "BlackBlueWhite",
     (
