@@ -10,4 +10,4 @@ Usage
 	import matplotlib.pyplot as plt
 	from psoplot import cmaps as pcm
 
-	plt.plot(x, y, cmap=pcm.BlackBlueWhite)
+	plt.imshow(data, cmap=pcm.BlackBlueWhite)
