@@ -20,8 +20,8 @@ extensions = [
 ]
 
 sphinx_gallery_conf = {
-    "examples_dirs": ["../../examples/styles"],
-    "gallery_dirs": ["styles_examples"],
+    "examples_dirs": ["../../examples/styles", "../../examples/colormaps"],
+    "gallery_dirs": ["styles_examples", "colormaps_examples"],
 }
 
 templates_path = ["_templates"]

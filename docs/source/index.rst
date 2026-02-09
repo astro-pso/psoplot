@@ -50,11 +50,14 @@ For example plots, see the example page.
    :maxdepth: 2
    :caption: Contents:
 
+   colormaps
+
 .. toctree::
    :maxdepth: 2
    :caption: Examples:
 
    styles_examples/index
+   colormaps_examples/index
 
 
 Indices and tables
