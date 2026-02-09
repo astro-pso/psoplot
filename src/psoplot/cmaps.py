@@ -336,6 +336,9 @@ def get_colormap(name: str) -> LinearSegmentedColormap:
         raise ValueError(
             f"Unknown colormap {name!r}. Available colormaps are: {available}."
         ) from exc
+
+
+__all__ = [
     "BlackBlueWhite",
     "BlackBlueYellow",
     "marco_diverging_1",
