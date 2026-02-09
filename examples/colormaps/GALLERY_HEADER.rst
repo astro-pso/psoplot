@@ -7,7 +7,7 @@ Usage
 -----
 .. code-block:: python
 
-	import matplotlib.pyplot as plt
-	from psoplot import cmaps as pcm
-
-	plt.imshow(data, cmap=pcm.BlackBlueWhite)
+  import matplotlib.pyplot as plt
+  from psoplot import cmaps as pcm
+  
+  plt.imshow(data, cmap=pcm.BlackBlueWhite)
