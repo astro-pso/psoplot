@@ -12,7 +12,7 @@ Usage
     import matplotlib.pyplot as plt
     from psoplot import cmaps as pcm
 
-    plt.imshow(data, cmap=pcm.BlackBlueWhite)
+    plt.imshow(data, cmap=pcm.midnight_ice)
 """
 
 import matplotlib.pyplot as plt

@@ -4,8 +4,8 @@ from __future__ import annotations
 
 from matplotlib.colors import LinearSegmentedColormap
 
-BlackBlueWhite = LinearSegmentedColormap.from_list(
-    "BlackBlueWhite",
+midnight_ice = LinearSegmentedColormap.from_list(
+    "midnight_ice",
     (
         # Edit this gradient at https://eltos.github.io/gradient/#000000-00AAB2-E7E4CA
         (0.000, (0.000, 0.000, 0.000)),
@@ -14,8 +14,8 @@ BlackBlueWhite = LinearSegmentedColormap.from_list(
     ),
 )
 
-BlackBlueYellow = LinearSegmentedColormap.from_list(
-    "BlackBlueYellow",
+midnight_sand = LinearSegmentedColormap.from_list(
+    "midnight_sand",
     (
         # Edit this gradient at https://eltos.github.io/gradient/#000000-00AAB2-F4EB9F
         (0.000, (0.000, 0.000, 0.000)),
@@ -24,8 +24,8 @@ BlackBlueYellow = LinearSegmentedColormap.from_list(
     ),
 )
 
-marco_diverging_1 = LinearSegmentedColormap.from_list(
-    "marco_diverging_1",
+azure_gold = LinearSegmentedColormap.from_list(
+    "azure_gold",
     (
         # Edit this gradient at https://eltos.github.io/gradient/#1170F1-E7E4CA-FFF20D
         (0.000, (0.067, 0.439, 0.945)),
@@ -34,8 +34,8 @@ marco_diverging_1 = LinearSegmentedColormap.from_list(
     ),
 )
 
-marco_diverging_2 = LinearSegmentedColormap.from_list(
-    "marco_diverging_2",
+teal_rust = LinearSegmentedColormap.from_list(
+    "teal_rust",
     (
         # Edit this gradient at https://eltos.github.io/gradient/#057B94-E7E4CA-A24909
         (0.000, (0.020, 0.482, 0.580)),
@@ -44,8 +44,8 @@ marco_diverging_2 = LinearSegmentedColormap.from_list(
     ),
 )
 
-marco_diverging_3 = LinearSegmentedColormap.from_list(
-    "marco_diverging_3",
+slate_amber = LinearSegmentedColormap.from_list(
+    "slate_amber",
     (
         # Edit this gradient at https://eltos.github.io/gradient/#404040-E7E4CA-FFBA25
         (0.000, (0.251, 0.251, 0.251)),
@@ -54,8 +54,8 @@ marco_diverging_3 = LinearSegmentedColormap.from_list(
     ),
 )
 
-marco_diverging_4 = LinearSegmentedColormap.from_list(
-    "marco_diverging_4",
+blue_amber = LinearSegmentedColormap.from_list(
+    "blue_amber",
     (
         # Edit this gradient at https://eltos.github.io/gradient/#0046BD-E7E4CA-D16B0A
         (0.000, (0.000, 0.275, 0.741)),
@@ -64,8 +64,8 @@ marco_diverging_4 = LinearSegmentedColormap.from_list(
     ),
 )
 
-marco_diverging_5 = LinearSegmentedColormap.from_list(
-    "marco_diverging_5",
+ember_cyan = LinearSegmentedColormap.from_list(
+    "ember_cyan",
     (
         # Edit this gradient at https://eltos.github.io/gradient/#DA8B0A-000000-00A1FF
         (0.000, (0.855, 0.545, 0.039)),
@@ -74,8 +74,8 @@ marco_diverging_5 = LinearSegmentedColormap.from_list(
     ),
 )
 
-marco_diverging_6 = LinearSegmentedColormap.from_list(
-    "marco_diverging_6",
+aurora = LinearSegmentedColormap.from_list(
+    "aurora",
     (
         # Edit this gradient at https://eltos.github.io/gradient/#0:00F9FF-30:0F0061-50:000000-70:804301-100:FFDC4E
         (0.000, (0.000, 0.976, 1.000)),
@@ -86,8 +86,8 @@ marco_diverging_6 = LinearSegmentedColormap.from_list(
     ),
 )
 
-marco_diverging_7 = LinearSegmentedColormap.from_list(
-    "marco_diverging_7",
+stormfire = LinearSegmentedColormap.from_list(
+    "stormfire",
     (
         (0.000, (0.000, 0.976, 1.000)),
         (0.300, (0.000, 0.384, 1.000)),
@@ -97,8 +97,8 @@ marco_diverging_7 = LinearSegmentedColormap.from_list(
     ),
 )
 
-marco_diverging_8 = LinearSegmentedColormap.from_list(
-    "marco_diverging_8",
+sun_ice = LinearSegmentedColormap.from_list(
+    "sun_ice",
     (
         # Edit this gradient at https://eltos.github.io/gradient/#0:FFE048-25:DA8B0A-50:000000-75.4:00A1FF-100:66FFED
         (0.000, (1.000, 0.878, 0.282)),
@@ -109,8 +109,8 @@ marco_diverging_8 = LinearSegmentedColormap.from_list(
     ),
 )
 
-pink_modified = LinearSegmentedColormap.from_list(
-    "pink_modified",
+rose_cream = LinearSegmentedColormap.from_list(
+    "rose_cream",
     (
         # Edit this gradient at https://eltos.github.io/gradient/#000000-A26969-D1AD94-E9E9B8-FFFFFF
         (0.000, (0.000, 0.000, 0.000)),
@@ -121,8 +121,8 @@ pink_modified = LinearSegmentedColormap.from_list(
     ),
 )
 
-steroidviridis = LinearSegmentedColormap.from_list(
-    "steroidviridis",
+viridis_plus = LinearSegmentedColormap.from_list(
+    "viridis_plus",
     (
         (0.000, (0.267, 0.004, 0.329)),
         (0.200, (0.231, 0.322, 0.545)),
@@ -133,8 +133,8 @@ steroidviridis = LinearSegmentedColormap.from_list(
     ),
 )
 
-snowyday = LinearSegmentedColormap.from_list(
-    "snowyday",
+snowfall = LinearSegmentedColormap.from_list(
+    "snowfall",
     (
         (0.000, (0.969, 0.988, 0.941)),
         (0.200, (0.800, 0.922, 0.773)),
@@ -145,8 +145,8 @@ snowyday = LinearSegmentedColormap.from_list(
     ),
 )
 
-blossomtree = LinearSegmentedColormap.from_list(
-    "blossomtree",
+blossom = LinearSegmentedColormap.from_list(
+    "blossom",
     (
         (0.000, (0.000, 0.000, 0.000)),
         (0.125, (0.118, 0.000, 0.000)),
@@ -160,8 +160,8 @@ blossomtree = LinearSegmentedColormap.from_list(
     ),
 )
 
-experdiv = LinearSegmentedColormap.from_list(
-    "experdiv",
+magenta_cyan = LinearSegmentedColormap.from_list(
+    "magenta_cyan",
     (
         (0.000, (0.627, 0.145, 0.569)),
         (0.250, (0.733, 0.290, 0.325)),
@@ -171,8 +171,8 @@ experdiv = LinearSegmentedColormap.from_list(
     ),
 )
 
-experdiv2 = LinearSegmentedColormap.from_list(
-    "experdiv2",
+purple_cyan = LinearSegmentedColormap.from_list(
+    "purple_cyan",
     (
         (0.000, (0.549, 0.000, 0.682)),
         (0.250, (1.000, 0.000, 0.078)),
@@ -182,8 +182,8 @@ experdiv2 = LinearSegmentedColormap.from_list(
     ),
 )
 
-cracky_autumn = LinearSegmentedColormap.from_list(
-    "cracky_autumn",
+neon_night = LinearSegmentedColormap.from_list(
+    "neon_night",
     (
         # Edit this gradient at https://eltos.github.io/gradient/#FFFFFF-00FFFF-2AD4FF-55AAFF-8080FF-AA55FF-D42AFF-FF00FF-000000
         (0.000, (1.000, 1.000, 1.000)),
@@ -198,8 +198,8 @@ cracky_autumn = LinearSegmentedColormap.from_list(
     ),
 )
 
-extendet_cividis = LinearSegmentedColormap.from_list(
-    "extendet_cividis",
+cividis_wide = LinearSegmentedColormap.from_list(
+    "cividis_wide",
     (
         # Edit this gradient at https://eltos.github.io/gradient/#000000-00224E-2A3F6D-575D6D-7D7C78-A59C74-D2C060-FEE838-FFFFFF
         (0.000, (0.000, 0.000, 0.000)),
@@ -214,8 +214,8 @@ extendet_cividis = LinearSegmentedColormap.from_list(
     ),
 )
 
-darksouls = LinearSegmentedColormap.from_list(
-    "darksouls",
+ember = LinearSegmentedColormap.from_list(
+    "ember",
     (
         # Edit this gradient at https://eltos.github.io/gradient/#FFFFFF-FFF5F0-FDD4C2-FCA082-FB6A4A-E32F27-B21218-67000D-000000
         (0.000, (1.000, 1.000, 1.000)),
@@ -246,8 +246,8 @@ sunset = LinearSegmentedColormap.from_list(
     ),
 )
 
-JMsiesta = LinearSegmentedColormap.from_list(
-    "JMsiesta",
+siesta = LinearSegmentedColormap.from_list(
+    "siesta",
     (
         # Edit this gradient at https://eltos.github.io/gradient/#FFFFFF-FFFFD9-E0F3B2-97D6B9-41B6C4-1F80B8-24429B-081D58-000000
         (0.000, (1.000, 1.000, 1.000)),
@@ -262,8 +262,8 @@ JMsiesta = LinearSegmentedColormap.from_list(
     ),
 )
 
-VivaCataluna = LinearSegmentedColormap.from_list(
-    "VivaCataluna",
+icefire = LinearSegmentedColormap.from_list(
+    "icefire",
     (
         (0.000, (0.153, 0.475, 0.812)),
         (0.330, (1.000, 0.094, 0.000)),
@@ -272,8 +272,8 @@ VivaCataluna = LinearSegmentedColormap.from_list(
     ),
 )
 
-fabian_gradient = LinearSegmentedColormap.from_list(
-    "fabian_gradient",
+forest_dusk = LinearSegmentedColormap.from_list(
+    "forest_dusk",
     (
         # Edit this gradient at https://eltos.github.io/gradient/#0:003C30-25:5BB3A8-50:F5F5F4-66.7:CEA053-83.3:834801-100:3A0061
         (0.000, (0.000, 0.235, 0.188)),
@@ -286,29 +286,29 @@ fabian_gradient = LinearSegmentedColormap.from_list(
 )
 
 COLORMAPS = {
-    "BlackBlueWhite": BlackBlueWhite,
-    "BlackBlueYellow": BlackBlueYellow,
-    "marco_diverging_1": marco_diverging_1,
-    "marco_diverging_2": marco_diverging_2,
-    "marco_diverging_3": marco_diverging_3,
-    "marco_diverging_4": marco_diverging_4,
-    "marco_diverging_5": marco_diverging_5,
-    "marco_diverging_6": marco_diverging_6,
-    "marco_diverging_7": marco_diverging_7,
-    "marco_diverging_8": marco_diverging_8,
-    "pink_modified": pink_modified,
-    "steroidviridis": steroidviridis,
-    "snowyday": snowyday,
-    "blossomtree": blossomtree,
-    "experdiv": experdiv,
-    "experdiv2": experdiv2,
-    "cracky_autumn": cracky_autumn,
-    "extendet_cividis": extendet_cividis,
-    "darksouls": darksouls,
+    "midnight_ice": midnight_ice,
+    "midnight_sand": midnight_sand,
+    "azure_gold": azure_gold,
+    "teal_rust": teal_rust,
+    "slate_amber": slate_amber,
+    "blue_amber": blue_amber,
+    "ember_cyan": ember_cyan,
+    "aurora": aurora,
+    "stormfire": stormfire,
+    "sun_ice": sun_ice,
+    "rose_cream": rose_cream,
+    "viridis_plus": viridis_plus,
+    "snowfall": snowfall,
+    "blossom": blossom,
+    "magenta_cyan": magenta_cyan,
+    "purple_cyan": purple_cyan,
+    "neon_night": neon_night,
+    "cividis_wide": cividis_wide,
+    "ember": ember,
     "sunset": sunset,
-    "JMsiesta": JMsiesta,
-    "VivaCataluna": VivaCataluna,
-    "fabian_gradient": fabian_gradient,
+    "siesta": siesta,
+    "icefire": icefire,
+    "forest_dusk": forest_dusk,
 }
 
 
@@ -339,29 +339,29 @@ def get_colormap(name: str) -> LinearSegmentedColormap:
 
 
 __all__ = [
-    "BlackBlueWhite",
-    "BlackBlueYellow",
-    "marco_diverging_1",
-    "marco_diverging_2",
-    "marco_diverging_3",
-    "marco_diverging_4",
-    "marco_diverging_5",
-    "marco_diverging_6",
-    "marco_diverging_7",
-    "marco_diverging_8",
-    "pink_modified",
-    "steroidviridis",
-    "snowyday",
-    "blossomtree",
-    "experdiv",
-    "experdiv2",
-    "cracky_autumn",
-    "extendet_cividis",
-    "darksouls",
+    "midnight_ice",
+    "midnight_sand",
+    "azure_gold",
+    "teal_rust",
+    "slate_amber",
+    "blue_amber",
+    "ember_cyan",
+    "aurora",
+    "stormfire",
+    "sun_ice",
+    "rose_cream",
+    "viridis_plus",
+    "snowfall",
+    "blossom",
+    "magenta_cyan",
+    "purple_cyan",
+    "neon_night",
+    "cividis_wide",
+    "ember",
     "sunset",
-    "JMsiesta",
-    "VivaCataluna",
-    "fabian_gradient",
+    "siesta",
+    "icefire",
+    "forest_dusk",
     "COLORMAPS",
     "list_colormaps",
     "get_colormap",

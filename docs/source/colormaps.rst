@@ -12,7 +12,7 @@ Usage
    import matplotlib.pyplot as plt
    from psoplot import cmaps as pcm
 
-   plt.imshow(data, cmap=pcm.BlackBlueWhite)
+   plt.imshow(data, cmap=pcm.midnight_ice)
 
 Available colormaps
 -------------------
@@ -22,8 +22,8 @@ The module exposes named colormaps and a small helper API:
 
    import psoplot.cmaps as pcm
 
-   pcm.list_colormaps()  # -> ("BlackBlueWhite", ...)
-   pcm.get_colormap("BlackBlueWhite")
+   pcm.list_colormaps()  # -> ("midnight_ice", ...)
+   pcm.get_colormap("midnight_ice")
 
 Defining new colormaps
 ----------------------
@@ -34,8 +34,8 @@ example:
 
    from matplotlib.colors import LinearSegmentedColormap
 
-   BlackBlueWhite = LinearSegmentedColormap.from_list(
-       "BlackBlueWhite",
+      midnight_ice = LinearSegmentedColormap.from_list(
+         "midnight_ice",
        (
            # Edit this gradient at https://eltos.github.io/gradient/#000000-00AAB2-E7E4CA
            (0.000, (0.000, 0.000, 0.000)),
