@@ -1,2 +1,2 @@
 # Versioning: <year>.<month>.<release>
-__version__ = "25.5.2"
+__version__ = "26.2.1"
