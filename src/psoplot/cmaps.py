@@ -285,8 +285,6 @@ fabian_gradient = LinearSegmentedColormap.from_list(
     ),
 )
 
-map1 = BlackBlueWhite
-
 COLORMAPS = {
     "BlackBlueWhite": BlackBlueWhite,
     "BlackBlueYellow": BlackBlueYellow,
@@ -361,7 +359,6 @@ def get_colormap(name: str) -> LinearSegmentedColormap:
     "JMsiesta",
     "VivaCataluna",
     "fabian_gradient",
-    "map1",
     "COLORMAPS",
     "list_colormaps",
     "get_colormap",
