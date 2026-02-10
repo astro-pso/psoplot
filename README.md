@@ -1,4 +1,4 @@
-# pso_plot
+# psoplot
 PSO Plotting Utils
 
 ## Installation
