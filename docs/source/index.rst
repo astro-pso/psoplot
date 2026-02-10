@@ -12,7 +12,7 @@ Installation
 ------------
 .. code-block:: bash
 
-   pip install pso_plot
+   pip install psoplot
 
 Usage
 -----
