@@ -33,3 +33,14 @@ size of the figure.
 - `psoplot.aas_publication`: A style for AAS publication, e.g. ApJ, ApJL, ApJS
 
 For example plots, see the (https://astro-pso.github.io/psoplot)[examples] page.
+
+## CLI: make-movie
+
+Use `make-movie` to build an MP4 from image frames sharing the same base name.
+
+```bash
+make-movie frame_ --extension png --fps 24 --output movie.mp4
+```
+
+The command searches for matching frames like `frame_*.<extension>` in the same directory,
+sorts them, and runs `ffmpeg` to produce the MP4 file.
