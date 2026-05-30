@@ -9,7 +9,7 @@
 project = "psoplot"
 copyright = "2025, Alexander Holas"
 author = "Alexander Holas"
-release = "25.05.1"
+release = "26.5.1"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
